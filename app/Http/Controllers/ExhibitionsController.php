@@ -11,7 +11,7 @@ class ExhibitionsController extends Controller
     {
         $title = __('main.controllers.tm_ex');
 
-        $tm_ex = Tmexhibition::orderBy('number','asc')->paginate(10);
+        $tm_ex = Tmexhibition::orderByAsc('number')->paginate(10);
 
         return view('org.tm_exhibition', compact('tm_ex', 'title'));
     }
